@@ -1,0 +1,1 @@
+﻿select euindex, (yearhigh - dailyhigh) as PositiveDifference from eustockmarket where (yearhigh - dailyhigh) > 100 order by PositiveDifference desc limit 5

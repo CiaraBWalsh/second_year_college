@@ -1,0 +1,10 @@
+﻿select count(*) from AllStudents where DOB > '1995-01-01'
+select count(*) from AllStudents where Gender like 'Female' and (HomeState like 'Ohio' or HomeState like 'Nebraska' or  HomeState like 'Idaho' or  HomeState like 'Indiana') 
+update modules set Campus =  'Commercialisation and Innovation Campus' where Campus like 'Incubation-Hub'
+select count(*) from modules where modulecode like 'DSG-059'
+select count(*) from studies where modulecode like 'DSG-059'
+delete from Modules where (modules.modulecode ='DSG-059')
+select * from AllStudents where Fullname like 'Jacqueline Martinez'
+select count(*) from studies where studentID = '194741'
+update AllStudents set studentID = '20194741' where studentID = '194741'
+select sum(credits) as total from modules,studies,allstudents where (studies.studentID = allstudents.studentID and modules.modulecode = studies.modulecode) and allstudents.fullname like 'Barbara Ray'
